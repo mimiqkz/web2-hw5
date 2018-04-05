@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+
 .app {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  text-decoration: underline;
+  text-align: center;
 }
 
 /* útfæra */
