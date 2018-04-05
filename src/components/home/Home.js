@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import './Home.css';
@@ -28,27 +27,21 @@ export default class Home extends Component {
       }).catch(err => console.error(err));
   }
 
-  static propTypes = {
-    averageStudents: PropTypes.string,
-    max: PropTypes.number,
-    min: PropTypes.number,
-    numStudents: PropTypes.number,
-    numTests: PropTypes.number
-  }
-
   render() {
     const {
       averageStudents, max, min, numStudents, numTests
-    } = this.props;
+    } = this.state;
     return (
       <div className="home">
         <Helmet title="Próftöflur"/>
         <h2>Tölfræði</h2>
-        <p>Fjöldi prófa {numTests}</p>
-        <p>Fjöldi nemenda í öllum prófum {numStudents}</p>
-        <p>Meðalfjöldi nemenda í prófi {averageStudents}</p>
-        <p>Minnsti nemenda í prófi {min}</p>
-        <p>Mesti nemenda í prófi {max}</p>
+        <div className = "data"> 
+          <p>Fjöldi prófa <span>{numTests}</span></p>
+          <p>Fjöldi nemenda í öllum prófum <span>{numStudents}</span></p>
+          <p>Meðalfjöldi nemenda í prófi <span>{averageStudents}</span></p>
+          <p>Minnsti nemenda í prófi <span>{min}</span></p>
+          <p>Mesti nemenda í prófi <span>{max}</span></p>
+        </div>
       </div>
     );
   }

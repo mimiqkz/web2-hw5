@@ -1,1 +1,28 @@
-/* útfæra */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+h1 {
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h2 {
+  margin: 10px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.home p {
+  margin: 10px;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+}
+
+span {
+  float: right;
+  font-weight: 100;
+}
+
+.data {
+  max-width: 500px;
+}

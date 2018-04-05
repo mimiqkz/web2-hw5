@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet';
 import './School.css';
 import Department from '../department/Department';
@@ -17,7 +18,7 @@ export default class School extends Component {
       data: null,
       loading: true,
       error: false,
-      visible: null
+      visible: false,
     }
   }
   
@@ -76,16 +77,18 @@ export default class School extends Component {
         {
           this.state.data.school.departments.map((i) => (
             <li key={i.heading}>
-            <Department
-              title={i.heading}
-              tests={i.tests}
-              visible={this.state.visible === i.heading}
-              onHeaderClick={(this.onHeaderClick(i.heading))}
-            />
-          </li>        
-        ))
+              <Department
+                title={i.heading}
+                tests={i.tests}
+                visible={this.state.visible === i.heading}
+                onHeaderClick={(this.onHeaderClick(i.heading))}
+              />
+              <hr></hr>
+            </li>        
+          )
+        )
       }
-        {this.state.department}
+      <p><Link to='/'>Heim</Link></p>
       </section>
     );
   }

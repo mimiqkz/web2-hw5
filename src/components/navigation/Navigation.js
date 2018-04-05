@@ -6,7 +6,7 @@ import './Navigation.css';
 
 /* hér ætti að sækja gögn frá vefþjónustu fyrir valmynd */
 export default class Navigation extends Component {
-  
+
   static propTypes = {
     name: PropTypes.string,
     link: PropTypes.string,

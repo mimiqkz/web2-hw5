@@ -23,7 +23,7 @@ export default class Exams extends Component {
 
   render() {
     const { onHeaderClick, visible, tests, title } = this.props;
-    const plus = visible ? '-': '+';
+    const plus = visible ? '- ': '+ ';
     return (
       <section className="department">
         <h3 onClick={onHeaderClick} className="note__header">{plus}{title}</h3>
@@ -42,7 +42,7 @@ export default class Exams extends Component {
                 <tr key={i.course}>
                   <td>{i.course}</td>
                   <td>{i.name}</td>
-                  <td>{i.student}</td>
+                  <td>{i.students}</td>
                   <td>{i.date}</td>
                 </tr>
               ))}
