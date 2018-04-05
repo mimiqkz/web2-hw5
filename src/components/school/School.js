@@ -29,8 +29,8 @@ export default class School extends Component {
     }
   }
 
-  async componentWillReceiveProps() {
-    const { match } = this.props;
+  async componentWillReceiveProps(newProps) {
+    const { match } = newProps;
 
     fetch(process.env.REACT_APP_SERVICE_URL + match.params.department)
       .then((data) => {
