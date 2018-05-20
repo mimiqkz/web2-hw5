@@ -29,7 +29,7 @@ export default class School extends Component {
     }
   }
 
-  async componentWillReceiveProps(newProps) {
+  componentWillReceiveProps(newProps) {
     const { match } = newProps;
 
     fetch(process.env.REACT_APP_SERVICE_URL + match.params.department)
@@ -45,7 +45,7 @@ export default class School extends Component {
       });
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const {match} = this.props;
     fetch(process.env.REACT_APP_SERVICE_URL + match.params.department)
       .then((data) => {

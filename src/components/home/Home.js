@@ -17,7 +17,7 @@ export default class Home extends Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     fetch(process.env.REACT_APP_SERVICE_URL + 'stats')
       .then((data) => {
         return data.json();

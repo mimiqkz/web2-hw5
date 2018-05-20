@@ -12,7 +12,7 @@ import NotFound from './components/not-found';
 class App extends Component {
   state = { data: null, loading: true, error: false }
 
-  async componentDidMount() {
+  componentDidMount() {
     fetch(process.env.REACT_APP_SERVICE_URL)
       .then((data) => {
         return data.json();
